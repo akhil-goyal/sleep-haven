@@ -1,43 +1,57 @@
-// Stripe Setup
-const stripe = Stripe("YOUR_STRIPE_PUBLISHABLE_KEY"); // Replace with your key
-const elements = stripe.elements();
-const cardElement = elements.create("card");
-cardElement.mount("#card-element"); // Add if using custom Stripe form
-
-document.getElementById("stripeButton").addEventListener("click", async () => {
-  const { error, paymentIntent } = await stripe.redirectToCheckout({
-    lineItems: [
+$(document).ready(function () {
+  // Product Slider
+  $(".slider").slick({
+    dots: true,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    responsive: [
       {
-        price: "YOUR_STRIPE_PRICE_ID", // Replace with your price ID
-        quantity: 1,
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        },
       },
     ],
-    mode: "payment",
-    successUrl:
-      window.location.origin + "/thank-you.html?token=" + generateToken(),
-    cancelUrl: window.location.origin,
   });
-  if (error) console.error(error);
-});
 
-// Form Validation
-document.getElementById("signupForm").addEventListener("submit", (e) => {
-  const email = document.getElementById("emailInput").value;
-  if (!email.includes("@")) {
-    e.preventDefault();
-    alert("Please enter a valid email.");
-  }
-});
+  // Parallax Hero
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    $(".hero-bg").css("transform", "translateY(" + scroll * 0.3 + "px)");
+  });
 
-// Generate Token for PDF Link
-function generateToken() {
-  return Math.random().toString(36).substring(2, 15); // Simple token, replace with secure one later
-}
+  // Header Fade
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $("header").addClass("scrolled");
+    } else {
+      $("header").removeClass("scrolled");
+    }
+  });
 
-// Set Download Link Expiry
-document.getElementById("downloadLink")?.addEventListener("click", () => {
-  setTimeout(() => {
-    document.getElementById("downloadLink").href = "#";
-    alert("Download link expired. Contact us for a new one.");
-  }, 24 * 60 * 60 * 1000); // 24 hours
+  // Testimonial Animation
+  $(".testimonial-card").each(function (i) {
+    setTimeout(() => {
+      $(this).addClass("show");
+    }, i * 200);
+  });
+
+  // Form Validation
+  $("#signupForm").submit(function (e) {
+    const email = $("#emailInput").val();
+    if (!email.includes("@")) {
+      e.preventDefault();
+      alert("Please enter a valid email.");
+    } else {
+      $(".signup-box").addClass("submitted");
+      setTimeout(() => {
+        $(".signup-box").removeClass("submitted");
+      }, 1000);
+    }
+  });
 });

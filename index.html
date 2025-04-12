@@ -23,6 +23,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Slick Slider CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -39,18 +48,55 @@
       </div>
     </header>
 
+    <!-- Swipeable Product Slider -->
+    <section class="product-slider py-4">
+      <div class="container">
+        <div class="slider">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="PDF Cover"
+              class="img-fluid"
+            />
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="Tablet Mockup"
+              class="img-fluid"
+            />
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="Book Stack"
+              class="img-fluid"
+            />
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="Sleep Scene"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Hero -->
     <section class="hero text-center">
-      <img
-        src="https://images.unsplash.com/photo-1512428813834-c177b766c303?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
-        alt="Cozy Bedroom"
-        class="img-fluid hero-img"
-      />
+      <div
+        class="hero-bg"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
+        "
+      ></div>
       <div class="hero-content">
-        <h1>Reclaim Your Nights</h1>
+        <h1>Reclaim Your Nights with Sleep Haven</h1>
         <p class="lead">
-          Ever lie awake at 2 a.m., replaying a client email? Sleep Haven’s
-          meditation guide helps you fall asleep faster and wake refreshed.
+          Ever lie awake at 2 a.m., replaying a client email? Our meditation
+          guide helps you fall asleep faster and wake refreshed.
         </p>
         <a href="#buy" class="btn btn-primary mt-3"
           ><i class="fas fa-cart-plus me-2"></i>Buy Now for $17.99</a
@@ -61,93 +107,63 @@
     <!-- Benefits -->
     <section class="benefits py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Why Sleep Haven Works</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card shadow-sm">
-              <div class="card-body text-center">
-                <i class="fas fa-moon fa-3x mb-3 text-primary"></i>
-                <h3>Quiet Work Stress</h3>
-                <p>
-                  Our scripts stop that midnight brain buzz, letting go of
-                  emails and deadlines.
-                </p>
+        <h2 class="text-center mb-5">Why Choose Sleep Haven</h2>
+        <ul class="nav nav-tabs justify-content-center mb-4">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#scripts"
+              >Scripts</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#toolkit">Toolkit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#worksheets"
+              >Worksheets</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="scripts">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <i class="fas fa-moon fa-2x mb-3 text-primary"></i>
+                    <h3>Guided Meditations</h3>
+                    <p>
+                      Five scripts to quiet work stress and ease you into sleep.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm">
-              <div class="card-body text-center">
-                <i class="fas fa-brain fa-3x mb-3 text-primary"></i>
-                <h3>Beginner-Friendly</h3>
-                <p>
-                  No experience needed—5-minute meditations fit your busy life.
-                </p>
+          <div class="tab-pane fade" id="toolkit">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <i class="fas fa-tools fa-2x mb-3 text-primary"></i>
+                    <h3>Sleep Toolkit</h3>
+                    <p>
+                      Practical tips to fight screens and build better habits.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm">
-              <div class="card-body text-center">
-                <i class="fas fa-check-circle fa-3x mb-3 text-primary"></i>
-                <h3>Proven Results</h3>
-                <p>
-                  Meditation cuts sleep time in half (Journal of Sleep
-                  Research).
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Listing -->
-    <section class="product-listing py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">What’s Inside Sleep Haven</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card shadow">
-              <img
-                src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="PDF Mockup"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3>Guided Scripts</h3>
-                <p>
-                  Five meditations to calm your mind, from work stress to deep
-                  dreams.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow">
-              <img
-                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="PDF on Tablet"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3>Sleep Toolkit</h3>
-                <p>
-                  Tips to fight screens and stress, plus a 30-day challenge.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow">
-              <img
-                src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Book Stack"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3>Worksheets</h3>
-                <p>Trackers and journals to make better sleep a habit.</p>
+          <div class="tab-pane fade" id="worksheets">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <i class="fas fa-file-alt fa-2x mb-3 text-primary"></i>
+                    <h3>Worksheets</h3>
+                    <p>Trackers and journals to make rest a routine.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -156,7 +172,7 @@
     </section>
 
     <!-- Product Carousel -->
-    <section class="carousel-section py-5">
+    <section class="carousel-section py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-5">Explore Sleep Haven</h2>
         <div
@@ -259,12 +275,12 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials py-5 bg-light">
+    <section class="testimonials py-5">
       <div class="container">
         <h2 class="text-center mb-5">What Professionals Say</h2>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm testimonial-card">
               <div class="card-body text-center">
                 <img
                   src="https://images.unsplash.com/photo-1534528744314-7d86e5fd6da6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
@@ -286,7 +302,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm testimonial-card">
               <div class="card-body text-center">
                 <img
                   src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
@@ -305,7 +321,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm testimonial-card">
               <div class="card-body text-center">
                 <img
                   src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
@@ -327,44 +343,14 @@
       </div>
     </section>
 
-    <!-- Buy Section -->
-    <section id="buy" class="buy py-5 text-center">
-      <div class="container">
-        <img
-          src="https://images.unsplash.com/photo-1532795986-6b1d02700410?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=400"
-          alt="Night Sky Banner"
-          class="img-fluid mb-4"
-        />
+    <!-- Buy CTA -->
+    <section id="buy" class="buy py-4 sticky-cta">
+      <div class="container text-center">
         <h2>Get Your Guide Now</h2>
-        <p>
-          Ready to sleep better? Choose your payment method and start tonight.
-        </p>
-        <div class="tabs">
-          <ul class="nav nav-tabs justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" data-bs-toggle="tab" href="#paypal"
-                ><i class="fab fa-paypal me-2"></i>PayPal</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#stripe"
-                ><i class="fas fa-credit-card me-2"></i>Credit/Debit Card</a
-              >
-            </li>
-          </ul>
-          <div class="tab-content mt-4">
-            <div class="tab-pane fade show active" id="paypal">
-              <button class="btn btn-primary">
-                <i class="fas fa-cart-plus me-2"></i>Pay with PayPal
-              </button>
-            </div>
-            <div class="tab-pane fade" id="stripe">
-              <button class="btn btn-primary">
-                <i class="fas fa-cart-plus me-2"></i>Pay with Card
-              </button>
-            </div>
-          </div>
-        </div>
+        <p>Your rest starts tonight—grab Sleep Haven for $17.99.</p>
+        <a href="#buy" class="btn btn-primary"
+          ><i class="fas fa-cart-plus me-2"></i>Buy Now</a
+        >
       </div>
     </section>
 
@@ -554,7 +540,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-5">
+    <section class="footer py-5">
       <div class="container">
         <div class="row g-4">
           <div class="col-md-4">
@@ -584,10 +570,14 @@
         </div>
         <p class="text-center mt-4">© 2025 Sleep Haven. All rights reserved.</p>
       </div>
-    </footer>
+    </section>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
   </body>

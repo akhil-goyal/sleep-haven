@@ -10,6 +10,7 @@ body {
   font-family: "DM Sans", sans-serif;
   background: var(--light);
   color: var(--dark);
+  line-height: 1.6;
 }
 
 h1,
@@ -22,43 +23,71 @@ h3 {
 /* Header */
 header {
   background: var(--light);
-  border-bottom: 2px solid var(--primary);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .logo {
   width: 200px;
   height: 50px;
+  border-radius: 5px;
 }
 
 .header-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Product Slider */
+.product-slider .slider img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-slider .slick-dots li button:before {
+  color: var(--primary);
+}
+
+.product-slider .slick-prev,
+.product-slider .slick-next {
+  background: var(--primary);
+  border-radius: 50%;
 }
 
 /* Hero */
 .hero {
   position: relative;
-  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
-.hero-img {
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 600px;
-  object-fit: cover;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
-  padding: 30px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 .hero p {
@@ -66,34 +95,25 @@ header {
 }
 
 /* Benefits */
+.benefits .nav-link {
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.benefits .nav-link.active {
+  background: var(--primary);
+  color: var(--light);
+}
+
 .benefits .card {
   border: none;
   border-radius: 15px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .benefits .card:hover {
-  transform: translateY(-10px);
-}
-
-.benefits h3 {
-  font-size: 1.5rem;
-}
-
-/* Product Listing */
-.product-listing .card {
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.product-listing img {
-  height: 300px;
-  object-fit: cover;
-}
-
-.product-listing h3 {
-  font-size: 1.4rem;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Carousel */
@@ -102,41 +122,96 @@ header {
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
-}
-
-.carousel-section .carousel {
-  max-width: 800px;
   margin: auto;
 }
 
 /* Testimonials */
-.testimonials .card {
+.testimonials .testimonial-card {
   border: none;
   border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.testimonials .testimonial-card.show {
+  opacity: 1;
 }
 
 .testimonials img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
 }
 
-/* Buy */
+/* Buy CTA */
 .buy {
-  background: linear-gradient(to bottom, var(--light), var(--primary));
+  background: linear-gradient(135deg, var(--primary), var(--dark));
+  color: var(--light);
 }
 
-.buy img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+.buy .btn-primary {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.buy .btn-primary:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* FAQs */
+.faqs .accordion-button {
+  background: var(--light);
+  color: var(--dark);
+  font-size: 1.1rem;
+}
+
+.faqs .accordion-button:not(.collapsed) {
+  background: var(--primary);
+  color: var(--light);
+}
+
+/* Signup */
+.signup-box {
+  background: var(--light);
+  padding: 40px;
   border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.signup-box .form-control {
+  border-radius: 25px;
+  padding: 12px;
+}
+
+.signup-box .btn-primary {
+  transition: transform 0.2s;
+}
+
+.signup-box .btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.footer a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+/* Buttons */
 .btn-primary {
   background: var(--primary);
   border: none;
-  padding: 12px 30px;
+  padding: 12px 25px;
   border-radius: 25px;
   font-size: 1.1rem;
 }
@@ -145,72 +220,18 @@ header {
   background: var(--dark);
 }
 
-/* FAQs */
-.faqs .accordion-button {
-  background: var(--light);
-  color: var(--dark);
-  font-size: 1.2rem;
-}
-
-.faqs .accordion-button:not(.collapsed) {
-  background: var(--primary);
-  color: var(--light);
-}
-
-.faqs .accordion-body {
-  background: var(--light);
-}
-
-/* Signup */
-.signup-box {
-  background: url("https://images.unsplash.com/photo-1501426026826-31c667bdf14d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=400");
-  background-size: cover;
-  padding: 40px;
-  border-radius: 15px;
-}
-
-.signup-box h2 {
-  color: var(--light);
-}
-
-.signup-box p {
-  color: var(--light);
-}
-
-.signup-box .form-control {
-  border-radius: 25px;
-}
-
-/* Footer */
-footer {
-  background: var(--dark);
-  color: var(--light);
-}
-
-footer a {
-  color: var(--light);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--primary);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-img {
-    height: 400px;
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
   }
   .hero-content {
     padding: 20px;
   }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .benefits .card {
-    margin-bottom: 20px;
+  .product-slider .slider img {
+    height: 300px;
   }
 }
