@@ -1,0 +1,25 @@
+{
+  "name": "sleep-haven",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhil-goyal/sleep-haven.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhil-goyal/sleep-haven/issues"
+  },
+  "homepage": "https://github.com/akhil-goyal/sleep-haven#readme",
+  "description": "",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
+    "express": "^5.1.0"
+  }
+}
