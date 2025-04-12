@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Sleep Haven</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=The+Youngest+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      fbq("init", "YOUR_PIXEL_ID");
+      fbq("track", "Purchase", { value: 17.99, currency: "USD" });
+    </script>
+  </head>
+  <body>
+    <header class="py-3">
+      <div class="container">
+        <img
+          src="assets/logo-placeholder.png"
+          alt="Logo Placeholder (200x50px)"
+          class="logo"
+        />
+      </div>
+    </header>
+
+    <section class="thank-you py-5 text-center">
+      <div class="container">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>
+          Your Sleep Haven guide is ready. Click below to download, or check
+          your email for a link (valid for 24 hours).
+        </p>
+        <a
+          href="assets/sleep-haven.pdf?token=YOUR_TOKEN"
+          class="btn btn-primary mt-3"
+          id="downloadLink"
+          >Download Now</a
+        >
+        <p>Issues? Reach us at [your email, optional]. Sweet dreams!</p>
+      </div>
+    </section>
+
+    <footer class="py-3 text-center">
+      <div class="container">
+        <p>&copy; 2025 Sleep Haven. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
