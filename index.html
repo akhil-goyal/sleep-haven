@@ -18,160 +18,221 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- Meta Pixel -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "YOUR_PIXEL_ID"); // Replace with your Pixel ID
-      fbq("track", "PageView");
-    </script>
   </head>
   <body>
     <!-- Header -->
-    <header class="py-3">
-      <div class="container">
+    <header class="sticky-top py-3">
+      <div class="container d-flex justify-content-between align-items-center">
         <img
-          src="assets/logo-placeholder.png"
+          src="https://images.unsplash.com/photo-1532795986-6b1d02700410?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=50"
           alt="Logo Placeholder (200x50px)"
           class="logo"
         />
+        <h1 class="header-title m-0">Sleep Haven</h1>
       </div>
     </header>
 
     <!-- Hero -->
-    <section class="hero text-center py-5">
-      <div class="container">
-        <h1>Reclaim Your Nights with Sleep Haven</h1>
+    <section class="hero text-center">
+      <img
+        src="https://images.unsplash.com/photo-1512428813834-c177b766c303?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
+        alt="Cozy Bedroom"
+        class="img-fluid hero-img"
+      />
+      <div class="hero-content">
+        <h1>Reclaim Your Nights</h1>
         <p class="lead">
-          Ever lie awake at 2 a.m., replaying a client email? This meditation
-          guide is your ticket to falling asleep faster and waking refreshed.
+          Ever lie awake at 2 a.m., replaying a client email? Sleep Haven’s
+          meditation guide helps you fall asleep faster and wake refreshed.
         </p>
-        <a
-          href="#buy"
-          class="btn btn-primary mt-3"
-          onclick="fbq('track', 'AddToCart', {value: 17.99, currency: 'USD'})"
-          >Buy Now for $17.99</a
+        <a href="#buy" class="btn btn-primary mt-3"
+          ><i class="fas fa-cart-plus me-2"></i>Buy Now for $17.99</a
         >
       </div>
     </section>
 
-    <!-- Product Details -->
-    <section class="product py-5">
+    <!-- Benefits -->
+    <section class="benefits py-5">
       <div class="container">
-        <h2>Why You Need Sleep Haven</h2>
-        <p>
-          Work stress keeping you up? You’re not alone. Poor sleep dims your
-          focus and saps your energy. Our 25-page guide, built for busy
-          professionals, delivers:
-        </p>
-        <ul>
-          <li>5 guided meditation scripts to quiet your mind.</li>
-          <li>Practical tips to fight work stress and screens.</li>
-          <li>Worksheets to build lasting sleep habits.</li>
-        </ul>
-        <p>
-          Meditation lowers cortisol, helping you drift off in half the time
-          (Journal of Sleep Research). Start tonight—no experience needed.
-        </p>
+        <h2 class="text-center mb-5">Why Sleep Haven Works</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <i class="fas fa-moon fa-3x mb-3 text-primary"></i>
+                <h3>Quiet Work Stress</h3>
+                <p>
+                  Our scripts stop that midnight brain buzz, letting go of
+                  emails and deadlines.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <i class="fas fa-brain fa-3x mb-3 text-primary"></i>
+                <h3>Beginner-Friendly</h3>
+                <p>
+                  No experience needed—5-minute meditations fit your busy life.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <i class="fas fa-check-circle fa-3x mb-3 text-primary"></i>
+                <h3>Proven Results</h3>
+                <p>
+                  Meditation cuts sleep time in half (Journal of Sleep
+                  Research).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Carousel -->
+    <!-- Product Listing -->
+    <section class="product-listing py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">What’s Inside Sleep Haven</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="PDF Mockup"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h3>Guided Scripts</h3>
+                <p>
+                  Five meditations to calm your mind, from work stress to deep
+                  dreams.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="PDF on Tablet"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h3>Sleep Toolkit</h3>
+                <p>
+                  Tips to fight screens and stress, plus a 30-day challenge.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow">
+              <img
+                src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Book Stack"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h3>Worksheets</h3>
+                <p>Trackers and journals to make better sleep a habit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Carousel -->
+    <section class="carousel-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Explore Sleep Haven</h2>
         <div
           id="productCarousel"
-          class="carousel slide mt-4"
+          class="carousel slide carousel-fade"
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="assets/product1-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1512428813834-c177b766c303?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="PDF Cover"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product2-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Sample Page 1"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product3-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Sample Page 2"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product4-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Mockup 1"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product5-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Mockup 2"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product6-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1501426026826-31c667bdf14d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Sample Page 3"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product7-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Sample Page 4"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product8-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-14973662105479-4275897d2e54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Mockup 3"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product9-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Mockup 4"
+                class="d-block mx-auto"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/product10-placeholder.png"
-                class="d-block w-100"
+                src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Sample Page 5"
+                class="d-block mx-auto"
               />
             </div>
           </div>
@@ -197,9 +258,83 @@
       </div>
     </section>
 
+    <!-- Testimonials -->
+    <section class="testimonials py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">What Professionals Say</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <img
+                  src="https://images.unsplash.com/photo-1534528744314-7d86e5fd6da6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+                  alt="Avatar 1"
+                  class="rounded-circle mb-3"
+                />
+                <p>
+                  “Sleep Haven stopped my 2 a.m. work spirals—best rest in
+                  years!”
+                </p>
+                <p>
+                  <i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <img
+                  src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+                  alt="Avatar 2"
+                  class="rounded-circle mb-3"
+                />
+                <p>“The scripts are so easy—I’m asleep in minutes now.”</p>
+                <p>
+                  <i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <img
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+                  alt="Avatar 3"
+                  class="rounded-circle mb-3"
+                />
+                <p>“Finally, a guide that gets my work stress—game-changer!”</p>
+                <p>
+                  <i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i
+                  ><i class="fas fa-star text-primary"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Buy Section -->
     <section id="buy" class="buy py-5 text-center">
       <div class="container">
+        <img
+          src="https://images.unsplash.com/photo-1532795986-6b1d02700410?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=400"
+          alt="Night Sky Banner"
+          class="img-fluid mb-4"
+        />
         <h2>Get Your Guide Now</h2>
         <p>
           Ready to sleep better? Choose your payment method and start tonight.
@@ -208,48 +343,24 @@
           <ul class="nav nav-tabs justify-content-center">
             <li class="nav-item">
               <a class="nav-link active" data-bs-toggle="tab" href="#paypal"
-                >PayPal</a
+                ><i class="fab fa-paypal me-2"></i>PayPal</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="tab" href="#stripe"
-                >Credit/Debit Card</a
+                ><i class="fas fa-credit-card me-2"></i>Credit/Debit Card</a
               >
             </li>
           </ul>
           <div class="tab-content mt-4">
             <div class="tab-pane fade show active" id="paypal">
-              <!-- PayPal Button -->
-              <form
-                action="https://www.paypal.com/cgi-bin/webscr"
-                method="post"
-                target="_top"
-                onsubmit="fbq('track', 'Purchase', {value: 17.99, currency: 'USD'})"
-              >
-                <input type="hidden" name="cmd" value="_s-xclick" />
-                <input
-                  type="hidden"
-                  name="hosted_button_id"
-                  value="YOUR_PAYPAL_BUTTON_ID"
-                />
-                <!-- Replace with your PayPal button ID -->
-                <input
-                  type="image"
-                  src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-                  border="0"
-                  name="submit"
-                  alt="PayPal - The safer, easier way to pay online!"
-                />
-              </form>
+              <button class="btn btn-primary">
+                <i class="fas fa-cart-plus me-2"></i>Pay with PayPal
+              </button>
             </div>
             <div class="tab-pane fade" id="stripe">
-              <!-- Stripe Button -->
-              <button
-                id="stripeButton"
-                class="btn btn-primary"
-                onclick="fbq('track', 'Purchase', {value: 17.99, currency: 'USD'})"
-              >
-                Pay with Card
+              <button class="btn btn-primary">
+                <i class="fas fa-cart-plus me-2"></i>Pay with Card
               </button>
             </div>
           </div>
@@ -260,7 +371,7 @@
     <!-- FAQs -->
     <section class="faqs py-5">
       <div class="container">
-        <h2>Frequently Asked Questions</h2>
+        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
         <div class="accordion" id="faqAccordion">
           <div class="accordion-item">
             <h3 class="accordion-header">
@@ -270,7 +381,8 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq1"
               >
-                What if my mind wanders during meditation?
+                <i class="fas fa-star me-2"></i>What if my mind wanders during
+                meditation?
               </button>
             </h3>
             <div id="faq1" class="accordion-collapse collapse show">
@@ -289,7 +401,7 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq2"
               >
-                Can I meditate in bed?
+                <i class="fas fa-star me-2"></i>Can I meditate in bed?
               </button>
             </h3>
             <div id="faq2" class="accordion-collapse collapse">
@@ -308,7 +420,8 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq3"
               >
-                What if I don’t fall asleep right away?
+                <i class="fas fa-star me-2"></i>What if I don’t fall asleep
+                right away?
               </button>
             </h3>
             <div id="faq3" class="accordion-collapse collapse">
@@ -327,7 +440,7 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq4"
               >
-                Is five minutes enough?
+                <i class="fas fa-star me-2"></i>Is five minutes enough?
               </button>
             </h3>
             <div id="faq4" class="accordion-collapse collapse">
@@ -345,7 +458,7 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq5"
               >
-                How fast do I get the PDF?
+                <i class="fas fa-star me-2"></i>How fast do I get the guide?
               </button>
             </h3>
             <div id="faq5" class="accordion-collapse collapse">
@@ -364,7 +477,7 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq6"
               >
-                Do I need meditation experience?
+                <i class="fas fa-star me-2"></i>Do I need meditation experience?
               </button>
             </h3>
             <div id="faq6" class="accordion-collapse collapse">
@@ -382,7 +495,7 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq7"
               >
-                Can it help with work stress?
+                <i class="fas fa-star me-2"></i>Can it help with work stress?
               </button>
             </h3>
             <div id="faq7" class="accordion-collapse collapse">
@@ -400,13 +513,14 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#faq8"
               >
-                What if I have issues downloading?
+                <i class="fas fa-star me-2"></i>What if I have issues
+                downloading?
               </button>
             </h3>
             <div id="faq8" class="accordion-collapse collapse">
               <div class="accordion-body">
-                No worries—reach us at [your email, optional], and we’ll send
-                the PDF directly. Your rest is our priority.
+                No worries—reach us at support@sleephaven.com, and we’ll send
+                the guide directly. Your rest is our priority.
               </div>
             </div>
           </div>
@@ -414,47 +528,66 @@
       </div>
     </section>
 
-    <!-- Signup Form -->
+    <!-- Signup -->
     <section class="signup py-5 text-center">
       <div class="container">
-        <h2>Get Sleep Tips</h2>
-        <p>
-          Want more ways to reclaim your nights? Sign up for free tips to sleep
-          better and stress less.
-        </p>
-        <!-- Mailchimp Form -->
-        <form
-          id="signupForm"
-          action="YOUR_MAILCHIMP_FORM_ACTION"
-          method="post"
-          onsubmit="fbq('track', 'Lead')"
-        >
-          <div class="mb-3">
-            <input
-              type="email"
-              class="form-control"
-              id="emailInput"
-              name="EMAIL"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">Sign Up</button>
-        </form>
+        <div class="signup-box shadow">
+          <h2><i class="fas fa-envelope me-2"></i>Get Sleep Tips</h2>
+          <p>
+            Want more ways to quiet that midnight brain buzz? Sign up for free
+            tips to sleep better.
+          </p>
+          <form id="signupForm">
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-3 text-center">
+    <footer class="py-5">
       <div class="container">
-        <p>&copy; 2025 Sleep Haven. All rights reserved.</p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1532795986-6b1d02700410?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=50"
+              alt="Logo Placeholder"
+              class="logo mb-3"
+            />
+            <p>Sleep Haven—your guide to better rest.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#buy">Buy Now</a></li>
+              <li><a href="#faqs">FAQs</a></li>
+              <li><a href="mailto:support@sleephaven.com">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Connect</h3>
+            <p>
+              <i class="fab fa-facebook fa-2x me-2"></i
+              ><i class="fab fa-instagram fa-2x me-2"></i
+              ><i class="fab fa-twitter fa-2x"></i>
+            </p>
+          </div>
+        </div>
+        <p class="text-center mt-4">© 2025 Sleep Haven. All rights reserved.</p>
       </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Stripe JS -->
-    <script src="https://js.stripe.com/v3/"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
   </body>
